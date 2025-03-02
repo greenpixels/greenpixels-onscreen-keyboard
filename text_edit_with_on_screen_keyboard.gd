@@ -8,20 +8,17 @@ const SYMBOLS_NODE_NAME := "Symbols"
 
 @export var show_keyboard := true :
 	set(value):
-		if not is_node_ready(): return
 		show_keyboard = value
 		%Controls.visible = show_keyboard
 
 @export var show_cancel_button := true :
 	set(value):
-		if not is_node_ready(): return
 		show_cancel_button = value
 		%CancelButton.visible = show_cancel_button
 		%MetaButtons.visible = (%CancelButton.visible or %SubmitButton.visible)
 		
 @export var show_submit_button := true :
 	set(value):
-		if not is_node_ready(): return
 		show_submit_button = value
 		%SubmitButton.visible = show_submit_button
 		%MetaButtons.visible = (%CancelButton.visible or %SubmitButton.visible)
@@ -34,10 +31,6 @@ signal on_cancel_pressed
 signal on_submit_pressed(text: String)
 
 func _ready() -> void:
-	show_keyboard = %Controls.visible
-	show_cancel_button = %CancelButton.visible
-	show_submit_button = %SubmitButton.visible
-	
 	if not Engine.is_editor_hint():
 		for key in %NumberKeys.get_children():
 			key.pressed.connect(func(): handle_key_pressed(key))

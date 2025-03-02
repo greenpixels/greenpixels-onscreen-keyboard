@@ -13,11 +13,10 @@
 ![](.github/screenshot2.png)
 ![](.github/screenshot3.png)
 ## Usage
+> 🛈 This repository can be added as a Git submodule:
+> `git submodule add https://github.com/greenpixels/greenpixels-onscreen-keyboard.git addons/greenpixels-onscreen-keyboard`
 
-> 🛈 This repository can be added as a Git submodule
-
-When adding this plugin to your project, an "OnScreenKeyboard"-Node-Type will be added to your project.
-Add that node wherever you need controller-accessible text-input.
+To use the component, just add a child-scene of `text_edit_with_on_screen_keyboard` to your scene.
 
 ## API
 - **Signals**: 

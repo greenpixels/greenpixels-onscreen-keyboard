@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bt0iwvnblvssu"]
 
-[ext_resource type="Script" path="res://text_edit_with_on_screen_keyboard.gd" id="1_f00dj"]
-[ext_resource type="Texture2D" uid="uid://rgiaimng4kd5" path="res://keyboard-icon.png" id="2_q8r3g"]
+[ext_resource type="Script" path="res://addons/greenpixels-onscreen-keyboard/text_edit_with_on_screen_keyboard.gd" id="1_f00dj"]
+[ext_resource type="Texture2D" uid="uid://rgiaimng4kd5" path="res://addons/greenpixels-onscreen-keyboard/keyboard-icon.png" id="2_q8r3g"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ttm8u"]
 

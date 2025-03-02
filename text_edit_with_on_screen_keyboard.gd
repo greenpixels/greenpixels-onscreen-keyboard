@@ -11,16 +11,22 @@ const SYMBOLS_NODE_NAME := "Symbols"
 
 @export var text_placeholder : String = "Input text ..." :
 	set(value):
+		if not is_node_ready():
+			await ready
 		text_placeholder = value
 		text_edit.placeholder_text = text_placeholder
 		
 @export var show_keyboard := true :
 	set(value):
+		if not is_node_ready():
+			await ready
 		show_keyboard = value
 		%Controls.visible = show_keyboard
 
 @export var show_cancel_button := true :
 	set(value):
+		if not is_node_ready():
+			await ready
 		show_cancel_button = value
 		%CancelButton.visible = show_cancel_button
 		%MetaButtons.visible = (%CancelButton.visible or %SubmitButton.visible)

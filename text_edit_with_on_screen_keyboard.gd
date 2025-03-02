@@ -6,6 +6,14 @@ const BIG_LETTERS_NODE_NAME := "LettersBig"
 const SMALL_LETTERS_NODE_NAME := "LettersSmall"
 const SYMBOLS_NODE_NAME := "Symbols"
 
+@onready var keyboards := %Keyboards
+@onready var text_edit := %TextEdit
+
+@export var text_placeholder : String = "Input text ..." :
+	set(value):
+		text_placeholder = value
+		text_edit.placeholder_text = text_placeholder
+		
 @export var show_keyboard := true :
 	set(value):
 		show_keyboard = value
@@ -23,8 +31,7 @@ const SYMBOLS_NODE_NAME := "Symbols"
 		%SubmitButton.visible = show_submit_button
 		%MetaButtons.visible = (%CancelButton.visible or %SubmitButton.visible)
 		
-@onready var keyboards := %Keyboards
-@onready var text_edit := %TextEdit
+
 
 signal on_text_changed(text: String)
 signal on_cancel_pressed

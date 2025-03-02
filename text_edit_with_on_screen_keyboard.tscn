@@ -26,10 +26,11 @@ theme_override_constants/margin_bottom = 4
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="TextInputContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/TextInputContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -37,12 +38,12 @@ focus_mode = 1
 placeholder_text = "Input text ..."
 scroll_fit_content_height = true
 
-[node name="KeyboardButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="KeyboardButton" type="Button" parent="MarginContainer/VBoxContainer/TextInputContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/KeyboardButton"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TextInputContainer/KeyboardButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,7 +54,7 @@ mouse_filter = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_right = 8
 
-[node name="KeyboardTexture" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/KeyboardButton/MarginContainer"]
+[node name="KeyboardTexture" type="TextureRect" parent="MarginContainer/VBoxContainer/TextInputContainer/KeyboardButton/MarginContainer"]
 custom_minimum_size = Vector2(32, 1)
 layout_mode = 2
 mouse_filter = 2
@@ -750,7 +751,7 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Submit"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/KeyboardButton" to="." method="_on_keyboard_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TextInputContainer/KeyboardButton" to="." method="_on_keyboard_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/ManipulationButtons/ShiftButton" to="." method="_on_shift_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/ManipulationButtons/SymbolsButton" to="." method="_on_symbols_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Controls/ManipulationButtons/SpaceButton" to="." method="_on_space_button_pressed"]

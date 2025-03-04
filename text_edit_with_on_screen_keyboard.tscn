@@ -10,7 +10,7 @@
 [node name="TextEditWithOnScreenKeyboard" type="PanelContainer"]
 offset_left = 163.0
 offset_top = 94.0
-offset_right = 559.0
+offset_right = 583.0
 offset_bottom = 137.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -707,26 +707,31 @@ size_flags_vertical = 3
 text = "¥"
 
 [node name="ManipulationButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Controls"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ShiftButton" type="Button" parent="MarginContainer/VBoxContainer/Controls/ManipulationButtons"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Shift"
 
 [node name="SymbolsButton" type="Button" parent="MarginContainer/VBoxContainer/Controls/ManipulationButtons"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Symbols"
 
 [node name="SpaceButton" type="Button" parent="MarginContainer/VBoxContainer/Controls/ManipulationButtons"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Space"
 
 [node name="BackspaceButton" type="Button" parent="MarginContainer/VBoxContainer/Controls/ManipulationButtons"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Delete"

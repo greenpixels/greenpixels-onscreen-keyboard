@@ -24,9 +24,16 @@ To use the component, just add a child-scene of `text_edit_with_on_screen_keyboa
   - `on_cancel_pressed()`
   - `on_submit_pressed(text: String)`
 - **Inspector Toggles**:
+  - `text_placeholder` : `String`
+  - `show_input` : `bool`
   - `show_keyboard` : `bool`
-  - `show_submit_button` : `bool`
   - `show_cancel_button` : `bool`
+  - `show_submit_button` : `bool`
+  - `only_show_numbers` : `bool`
+  - `show_space` : `bool`
+  - `show_shift` : `bool`
+  - `show_backspace` : `bool`
+  - `show_symbols` : `bool`
 
 ## Credits:
 Keyboard Icon - by https://fontawesome.com/
